@@ -18,7 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class ClassJiraAssignment {
 	@Test
 	public void test() throws InterruptedException {
-		String[] members = { "jotheesh", "anish", "asif", "Nawin","Pradeep"};
+		String[] members = {  "asif", "Nawin", "ANIS", "asfi", "jotheesh kumar", "Pradeep"};
 		Random randomNum = new Random();
 		int ranGen = randomNum.nextInt(members.length);
 		String name = members[ranGen];
@@ -29,12 +29,12 @@ public class ClassJiraAssignment {
 		chrOpt.addArguments("--start-maximized");
 		chrOpt.addArguments("--incognito");
 		ChromeDriver driver = new ChromeDriver(chrOpt);
-		driver.get("https://pradeep1331.atlassian.net/jira/software/projects/PT/boards/1");
+		driver.get("https://jotheeshkumar.atlassian.net/jira/software/projects/AUTO/boards/2");
 		// driver.executeCdpCommand();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.findElement(By.id("username")).sendKeys("spradeep1331@gmail.com");
+		driver.findElement(By.id("username")).sendKeys("jotheesh1992@gmail.com");
 		driver.findElement(By.id("login-submit")).click();
-		driver.findElement(By.id("password")).sendKeys("Scsp1111");
+		driver.findElement(By.id("password")).sendKeys("");
 		driver.findElement(By.id("login-submit")).click();
 		driver.findElement(By.xpath("(//span[text()='Projects'])[1]")).click();
 		driver.findElement(By.xpath("(//span[text()='View all projects'])")).click();
